@@ -9,6 +9,10 @@ const jwtPassword = 'secret_key';
  */
 function signJwtWithRole(username, role) {
     // Your code here
+    if(role === "admin" || role === "guest"){
+        return jwt.sign({username,role},jwtPassword);
+    }
+    return null;
 }
 
 /**
@@ -18,4 +22,17 @@ function signJwtWithRole(username, role) {
  */
 function isAdmin(token) {
     // Your code here
+    try {
+        const decoded = jwt.verify(token,jwtPassword);
+        if(decoded.role === "admin") return true;
+        else return false;
+    } catch (error) {
+        return false
+    }
+}
+
+module.exports = {
+    signJwtWithRole,
+    isAdmin,
+    jwtPassword
 }

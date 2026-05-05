@@ -3,7 +3,7 @@ const {
   signJwtWithRole,
   isAdmin,
   jwtPassword
-} = require('../');
+} = require("../index.js");
 
 describe('signJwtWithRole', () => {
     test('signs a jwt with correct role', () => {
