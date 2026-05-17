@@ -13,20 +13,20 @@ Build a collaborative expiry tracking application for shared households. Roommat
 ## Core Requirements
 
 ### 1. Authentication & User Management
-- [ ] User registration and login with JWT
-- [ ] Protected routes middleware
+- [Done] User registration and login with JWT
+- [Done] Protected routes middleware
 - [ ] User profile with joined household display
 
 ### 2. Household System
-- [ ] Create household with auto-generated invite code (6 characters)
-- [ ] Join household using invite code
-- [ ] View all household members
-- [ ] Leave household functionality
+- [Done] Create household with auto-generated invite code (6 characters)
+- [Done] Join household using invite code
+- [Done] View all household members
+- [Done] Leave household functionality
 
 ### 3. Inventory Management
-- [ ] Add items with: name, category, expiry date, quantity
+- [Done] Add items with: name, category, expiry date, quantity
 - [ ] Auto-assign status: `fresh`, `expiring-soon` (≤3 days), `expired`
-- [ ] Edit and delete items (only by creator or household admin)
+- [Done] Edit and delete items (only by creator or household admin)
 - [ ] Barcode scanner integration (browser-based)
 
 ### 4. Dashboard & Alerts
@@ -35,7 +35,7 @@ Build a collaborative expiry tracking application for shared households. Roommat
 - [ ] Sort and filter by category or expiry date
 
 ### 5. Waste Tracking
-- [ ] Mark items as `used` or `wasted`
+- [Done] Mark items as `used` or `wasted`
 - [ ] Calculate household waste score: `(used / total) × 100`
 - [ ] Simple leaderboard showing top contributors
 
