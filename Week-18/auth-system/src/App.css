@@ -64,3 +64,66 @@
 .login-form button:hover {
   background-color: #357a91;
 }
+
+
+.auth-container {
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+}
+
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #3f98b5;
+  color: white;
+}
+
+
+.app-bar > h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.userShown {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.loginButton {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+ul {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+li {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
