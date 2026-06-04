@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
-import { AmazonStyleCart, WishList } from "./components"
+import  AmazonStyleCart from "./components/AmazonStyleCart.jsx"
+import WishList from "./components/WishList.jsx"
 import './App.css'
 
 

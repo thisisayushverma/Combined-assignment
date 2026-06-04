@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #232F3E;
+    color:white;
+    align-items: center;
+}
+
+.logo{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cart-main{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart{
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.shopping-icon {
+    margin: 5px;
+}
+
+.quantity{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background: #d67b12;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    /* padding: auto; */
+}
+

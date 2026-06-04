@@ -1,0 +1,114 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cart-container{
+    display: flex;
+    gap:10px;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    height: 100vh;
+}
+
+.shopping-cart-main{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px ;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+
+.shopping-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-item{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(202, 201, 201);
+}
+
+.item-img{
+    height: 100px;
+    width: 100px;
+
+}
+
+.item-quantity{
+    display: flex;
+    gap: 10px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    width: 100%;
+    
+    
+}
+
+.item > p{
+    color: green;
+}
+
+.item-sub, .item-add{
+    background-color: gray;
+    padding: 4px 8px;
+    font-size: 15px;
+}
+
+.item-quantity > span{
+    color: blue;
+}
+
+.item-price{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.order-summary{
+    width: 500px;
+    height: fit-content;
+    
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+
+.item-summary, .item-total{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(202, 201, 201);
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.item-total{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+.order-summary > button {
+    width: 100%;
+    padding: 15px 10px ;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: rgb(212, 165, 11);
+    border: none;
+}
