@@ -5,7 +5,7 @@ import bcryptjs from "bcryptjs";
 
 const registerHandler = asyncHandler(async(req,res)=>{
     const {email , name, password} = req.body;
-    console.log("req",req);
+    // console.log("req",req);
     
     if(!email || !name || !password){
         return res.status(400).json({
@@ -86,9 +86,10 @@ const loginHandler = asyncHandler(async (req,res)=>{
 
     res.cookie("token",refreshToken,{
         httpOnly:true,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
     })
 
-    res.setHeader("Authorizarion",`Bearer ${accessToken}`)
+    res.setHeader("Authorization",`Bearer ${accessToken}`)
 
     return res.status(200).json({
         status:200,
@@ -101,7 +102,43 @@ const loginHandler = asyncHandler(async (req,res)=>{
 })
 
 
+const getUser = asyncHandler(async (req,res)=>{
+    const {_id} = req.user;
+    console.log("id - ",_id);
+    
+    if(!_id){
+        return res.status(401).json({
+            status:401,
+            data:null,
+            error: "Unauthorized access"
+        })
+    }
+
+    const userDetails = await User.findById(_id).select("-password");
+    if(!userDetails){
+        return  res.status(400).json({
+            status:400,
+            data:null,
+            error: "Bad request"
+        })
+    }
+    console.log("user details -",userDetails);
+    
+    return res.status(200).json({
+        staus:200,
+        data:{
+            userDetails
+        },
+        error:null
+    })
+
+
+})
+
+
+
 export {
     registerHandler,
-    loginHandler
+    loginHandler,
+    getUser
 }
